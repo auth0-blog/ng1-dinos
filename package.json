@@ -1,0 +1,43 @@
+{
+  "name": "ng1-event-calendar",
+  "version": "0.0.1",
+  "author": "Auth0",
+  "description": "Angular 1 event calendar sample SPA",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kmaida/ng1-event-calendar.git"
+  },
+  "keywords": [
+    "angular",
+    "sass",
+    "gulp",
+    "responsive"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kmaida/ng1-event-calendar/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/kmaida/ng1-event-calendar",
+  "dependencies": {},
+  "devDependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "express-jwt": "^5.1.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-debug": "^2.1.2",
+    "gulp-eslint": "^1.1.1",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-util": "^3.0.7"
+  }
+}

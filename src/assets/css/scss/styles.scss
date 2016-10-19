@@ -1,0 +1,36 @@
+/*
+ * ng1-event-calendar Boilerplate / ng1-event-calendar Angular
+ * Author: Kim Maida 
+ * Author URI: <http://kim-maida.com>
+ * Source: <https://github.com/kmaida/ng1-event-calendar-angular>
+ * License: GNU Public License
+*/
+
+/*-- Vendors --*/
+
+@import 'vendor/foundation';
+
+/*-- Core --*/
+
+// partials
+@import 'core/partials/colors.vars';
+@import 'core/partials/layout.vars';
+@import 'core/partials/responsive.partial';
+
+@import 'core/base';
+@import 'core/fonts';
+@import 'core/icons';
+@import 'core/presentation';
+@import 'core/layout';
+@import 'core/print';
+
+/*-- Modules --*/
+
+@import 'modules/header';
+@import 'modules/nav';
+@import 'modules/footer';
+@import 'modules/loading';
+
+/*-- Pages --*/
+
+@import 'pages/404';

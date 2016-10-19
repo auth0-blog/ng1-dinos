@@ -1,0 +1,31 @@
+/*--------------------
+	 PRESENTATION
+--------------------*/
+
+body {
+	background: $color-bg-light;
+	color: $color-text;
+	font: normal 16px/1.2 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+}
+.layout-canvas {
+	background: $color-bg;
+}
+
+/*------------------------------------------------------------------------- Content --*/
+
+.content-wrapper {
+	padding: $padding-screen-small;
+
+	@include mq($large) {
+		padding: $padding-screen-large;
+	}
+}
+.content-heading {
+	font-size: 36px;
+	margin: -1.5% 0 20px;
+
+	@include mq($large) {
+		margin-top: 0;
+		text-align: center;
+	}
+}

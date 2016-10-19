@@ -1,0 +1,22 @@
+{
+	"title": "ng1-event-calendar Angular",
+	"summary": "ng1-event-calendar responsive framework in AngularJS",
+    "animals": [
+      {
+        "name": "housecat",
+        "class": "mammal"
+      },
+      {
+        "name": "goldfish",
+        "class": "fish"
+      },
+      {
+        "name": "hawk",
+        "class": "bird"
+      },
+      {
+        "name": "frog",
+        "class": "amphibian"
+      }
+    ]
+}

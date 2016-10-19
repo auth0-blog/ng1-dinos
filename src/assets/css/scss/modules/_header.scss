@@ -1,0 +1,22 @@
+/*--------------------
+	    HEADER
+--------------------*/
+
+.header-mobile-page {
+	background: $color-nav-bg;
+	color: $color-white;
+	height: 50px;
+	margin-bottom: 10px;
+	position: relative;
+
+	&-siteTitle {
+		font-size: 30px;
+		line-height: 50px;
+		margin: 0;
+		padding: 0 0 0 50px;
+		position: absolute;
+		top: 0;
+		text-align: center;
+		width: 100%;
+	}
+}

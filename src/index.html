@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<!--[if lte IE 8]><html lang="en" class="no-js oldIE ie no-angular"><![endif]-->
+<!--[if IE 9]><html lang="en" class="no-js ie9 ie" ng-app="ng1-event-calendar" ng-controller="PageCtrl as page" ng-cloak><![endif]-->
+<!--[if gt IE 9|!IE]><!--><html class="no-js" ng-app="ng1-event-calendar" ng-controller="PageCtrl as page" ng-cloak><!-- <![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<title ng-bind="page.metadata.getTitle()"></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Kim Maida">
+		<meta name="keywords" content="{{page.metadata.getKeywords()}}">
+		<meta name="description" content="{{page.metadata.getDesc()}}">
+		<base href="/">
+
+		<!-- Stylesheets -->
+		<link href="/assets/css/styles.css" rel="stylesheet" media="all">
+
+		<!-- Early-load vendors -->
+		<script src="/assets/js/vendor/modernizr.min.js"></script>
+	</head>
+
+	<body>
+		<div class="layout-overflow">
+			<div class="layout-canvas">
+			
+			<!-- HEADER -->
+				<header id="header" class="header clearfix" ng-include="'ng1-event-calendar/modules/header/header.tpl.html'"></header>
+
+			<!-- CONTENT (Angular View) -->
+				<div id="layout-view" class="layout-view" ng-view autoscroll="true"></div>
+
+			<!-- FOOTER -->
+				<footer id="footer" class="footer clearfix" ng-include="'ng1-event-calendar/modules/footer/footer.tpl.html'"></footer>
+
+			</div> <!-- /.layout-canvas -->
+		</div> <!-- /.layout-overflow -->
+
+		<loading></loading>
+
+		<!-- JS Libraries -->
+		<!-- concatenated and minified -->
+		<script src="/assets/js/vendor/vendor.js"></script>
+
+		<!-- Angular app JS -->
+		<!-- dev: concatenated; production: concatenated and minified -->
+		<script src="/ng1-event-calendar/ng1-event-calendar.js"></script>
+		
+		<!-- JavaScript -->
+		<!-- dev: concatenated; production: concatenated and minified -->
+		<script src="/assets/js/scripts.js"></script>
+	</body>
+</html>
