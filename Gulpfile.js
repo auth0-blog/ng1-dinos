@@ -21,7 +21,7 @@ var concat = require('gulp-concat');
  ********************** Modification to other sections should not be necessary if using default setup
  */
 
-var jsAngularDir = 'ng1-event-calendar';
+var jsAngularDir = 'ng1-sw';
 var jsAngularScript = jsAngularDir + '.js';
 var jsUserScript = 'scripts.js';
 var basePath = {
@@ -32,10 +32,6 @@ var path = {
 	css: {
 		src: basePath.src + '/assets/css/scss/',
 		dest: basePath.dest + '/assets/css/'
-	},
-	images: {
-		src: basePath.src + '/assets/images/',
-		dest: basePath.src + '/assets/images/'
 	},
 	js: {
 		src: basePath.src + '/assets/js/',
@@ -182,7 +178,6 @@ function serve() {
  * Default build task
  *
  * If not production, watch for file changes and execute the appropriate task
- *
  * Use "gulp --prod" to trigger production/build mode from commandline
  */
 function defaultTask() {

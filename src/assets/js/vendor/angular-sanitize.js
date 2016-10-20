@@ -290,7 +290,7 @@ function $SanitizeProvider() {
       'marker-end,marker-mid,marker-start,markerHeight,markerUnits,markerWidth,mathematical,' +
       'max,min,offset,opacity,orient,origin,overline-position,overline-thickness,panose-1,' +
       'path,pathLength,points,preserveAspectRatio,r,refX,refY,repeatCount,repeatDur,' +
-      'requiredExtensions,requiredFeatures,rotate,rx,ry,slope,stemh,stemv,stop-color,' +
+      'requiredExtensions,requiredFeatures,restart,rotate,rx,ry,slope,stemh,stemv,stop-color,' +
       'stop-opacity,strikethrough-position,strikethrough-thickness,stroke,stroke-dasharray,' +
       'stroke-dashoffset,stroke-linecap,stroke-linejoin,stroke-miterlimit,stroke-opacity,' +
       'stroke-width,systemLanguage,target,text-anchor,to,transform,type,u1,u2,underline-position,' +

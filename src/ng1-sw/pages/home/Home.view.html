@@ -1,0 +1,19 @@
+<article id="content-wrapper" class="content-wrapper home-wrapper">
+	<section id="content-main" class="content-main home-content clearfix" ng-cloak>
+		<h1 class="content-heading" ng-bind="::home.title"></h1>
+
+		<div class="input-group">
+			<span class="input-group-label middle">Name:</span>
+			<input type="text" ng-model="home.name" class="input-group-field" />
+			<div class="input-group-button">
+				<button ng-click="home.alertGreeting(home.name)" class="button">Greet</button>
+			</div>
+		</div>
+
+		<h2>{{::home.global.greeting}}, {{home.name}}!</h2>
+		
+		<p ng-bind="::home.json.summary"></p>
+
+		<p ng-bind-html="home.stringOfHTML | trustAsHTML"></p>
+	</section>
+</article>

@@ -1,12 +1,12 @@
 {
-  "name": "ng1-event-calendar",
+  "name": "ng1-sw",
   "version": "0.0.1",
   "author": "Auth0",
-  "description": "Angular 1 event calendar sample SPA",
+  "description": "Angular 1 sample Single Page Application with API",
   "main": "index.html",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kmaida/ng1-event-calendar.git"
+    "url": "https://github.com/kmaida/ng1-sw.git"
   },
   "keywords": [
     "angular",
@@ -16,18 +16,14 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kmaida/ng1-event-calendar/issues"
+    "url": "https://github.com/kmaida/ng1-sw/issues"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/kmaida/ng1-event-calendar",
+  "homepage": "https://github.com/kmaida/ng1-sw",
   "dependencies": {},
   "devDependencies": {
-    "body-parser": "^1.15.2",
-    "cors": "^2.8.1",
-    "express": "^4.14.0",
-    "express-jwt": "^5.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-clean-css": "^2.0.13",

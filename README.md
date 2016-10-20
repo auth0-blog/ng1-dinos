@@ -1,4 +1,4 @@
-ng1-event-calendar
+ng1-sw
 ==========
 
-Sample Angular 1.x application with an event calendar API
+Sample Angular 1.x application using the (Star Wars API)[http://swapi.co]

@@ -59,18 +59,8 @@
 	box-shadow: inset -8px 0 8px -6px rgba(0,0,0,0.2);
 	padding: $padding-screen-small;
 
-	@include mq($large) {
-		background: $color-nav-bg;
-		box-shadow: none;
-		padding: $padding-screen-large;
-	}
-
 	.active .nav-list-item-text {
 		font-weight: bold;
-
-		@include mq($large) {
-			border-bottom: 1px solid $color-disabled-rgba;
-		}
 	}
 	&-list {
 		list-style: none;
@@ -85,24 +75,6 @@
 			&:active,
 			&:focus {
 				text-decoration: none;
-			}
-		}
-
-		@include mq($large) {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			padding: 0;
-			width: 100%;
-
-			a,
-			a:hover,
-			a:active,
-			a:focus {
-				color: $color-white;
-			}
-			li {
-				padding: 0 20px;
 			}
 		}
 	}

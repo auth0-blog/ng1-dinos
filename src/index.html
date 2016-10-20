@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <!--[if lte IE 8]><html lang="en" class="no-js oldIE ie no-angular"><![endif]-->
-<!--[if IE 9]><html lang="en" class="no-js ie9 ie" ng-app="ng1-event-calendar" ng-controller="PageCtrl as page" ng-cloak><![endif]-->
-<!--[if gt IE 9|!IE]><!--><html class="no-js" ng-app="ng1-event-calendar" ng-controller="PageCtrl as page" ng-cloak><!-- <![endif]-->
+<!--[if IE 9]><html lang="en" class="no-js ie9 ie" ng-app="ng1-sw" ng-controller="PageCtrl as page" ng-cloak><![endif]-->
+<!--[if gt IE 9|!IE]><!--><html class="no-js" ng-app="ng1-sw" ng-controller="PageCtrl as page" ng-cloak><!-- <![endif]-->
 	<head>
 		<meta charset="utf-8">
 		<title ng-bind="page.metadata.getTitle()"></title>
@@ -12,7 +12,9 @@
 		<base href="/">
 
 		<!-- Stylesheets -->
-		<link href="/assets/css/styles.css" rel="stylesheet" media="all">
+		<link 
+			rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="/assets/css/styles.css" media="all">	
 
 		<!-- Early-load vendors -->
 		<script src="/assets/js/vendor/modernizr.min.js"></script>
@@ -23,13 +25,13 @@
 			<div class="layout-canvas">
 			
 			<!-- HEADER -->
-				<header id="header" class="header clearfix" ng-include="'ng1-event-calendar/modules/header/header.tpl.html'"></header>
+				<header id="header" class="header clearfix" ng-include="'ng1-sw/components/header/header.tpl.html'"></header>
 
 			<!-- CONTENT (Angular View) -->
 				<div id="layout-view" class="layout-view" ng-view autoscroll="true"></div>
 
 			<!-- FOOTER -->
-				<footer id="footer" class="footer clearfix" ng-include="'ng1-event-calendar/modules/footer/footer.tpl.html'"></footer>
+				<footer id="footer" class="footer clearfix" ng-include="'ng1-sw/components/footer/footer.tpl.html'"></footer>
 
 			</div> <!-- /.layout-canvas -->
 		</div> <!-- /.layout-overflow -->
@@ -42,7 +44,7 @@
 
 		<!-- Angular app JS -->
 		<!-- dev: concatenated; production: concatenated and minified -->
-		<script src="/ng1-event-calendar/ng1-event-calendar.js"></script>
+		<script src="/ng1-sw/ng1-sw.js"></script>
 		
 		<!-- JavaScript -->
 		<!-- dev: concatenated; production: concatenated and minified -->

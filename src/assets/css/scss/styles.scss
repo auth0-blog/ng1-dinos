@@ -1,14 +1,10 @@
 /*
- * ng1-event-calendar Boilerplate / ng1-event-calendar Angular
+ * ng1-sw
  * Author: Kim Maida 
- * Author URI: <http://kim-maida.com>
- * Source: <https://github.com/kmaida/ng1-event-calendar-angular>
- * License: GNU Public License
+ * Author URI: <http://github.com/kmaida>
+ * Source: <https://github.com/kmaida/ng1-sw>
+ * License: MIT
 */
-
-/*-- Vendors --*/
-
-@import 'vendor/foundation';
 
 /*-- Core --*/
 
@@ -17,9 +13,8 @@
 @import 'core/partials/layout.vars';
 @import 'core/partials/responsive.partial';
 
+// basics
 @import 'core/base';
-@import 'core/fonts';
-@import 'core/icons';
 @import 'core/presentation';
 @import 'core/layout';
 @import 'core/print';
