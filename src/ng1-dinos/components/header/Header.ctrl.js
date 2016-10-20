@@ -2,12 +2,12 @@
 	'use strict';
 
 	angular
-		.module('ng1-sw')
+		.module('ng1-dinos')
 		.controller('HeaderCtrl', HeaderCtrl);
 
-	HeaderCtrl.$inject = ['$location', 'JSONData'];
+	HeaderCtrl.$inject = ['$location'];
 
-	function HeaderCtrl($location, JSONData) {
+	function HeaderCtrl($location) {
 		// controllerAs ViewModel
 		var header = this;
 
@@ -23,31 +23,7 @@
 		 * @private
 		 */
 		function _init() {
-			// activate controller
-			_activate();
-		}
-
-		/**
-		 * Controller activate
-		 * Get JSON data
-		 *
-		 * @returns {*}
-		 * @private
-		 */
-		function _activate() {
-			// get the data from JSON
-			return JSONData.getLocalData().then(_getJsonSuccess);
-		}
-
-		/**
-		 * Successful promise data
-		 *
-		 * @param data {json}
-		 * @private
-		 */
-		function _getJsonSuccess(data) {
-			header.json = data;
-			return header.json;
+			
 		}
 
 		/**

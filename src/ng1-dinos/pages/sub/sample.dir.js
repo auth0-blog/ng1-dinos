@@ -9,7 +9,7 @@
 	'use strict';
 
 	angular
-		.module('ng1-sw')
+		.module('ng1-dinos')
 		.directive('sampleDirective', sampleDirective);
 
 	sampleDirective.$inject = ['$timeout'];
@@ -20,12 +20,12 @@
 			restrict: 'EA',
 			replace: true,
 			scope: {},
-			templateUrl: 'ng1-sw/pages/sub/sample.tpl.html',
+			templateUrl: 'ng1-dinos/pages/sub/sample.tpl.html',
 			transclude: true,
 			controller: SampleDirectiveCtrl,
 			controllerAs: 'sd',
 			bindToController: {
-				jsonData: '='
+				APIData: '='
 			},
 			link: sampleDirectiveLink
 		};
@@ -48,19 +48,19 @@
 			 */
 			function _init() {
 				// watch for async data to become available and update
-				$scope.$watch('sd.jsonData', _$watchJsonData);
+				$scope.$watch('sd.APIData', _$watchAPIData);
 			}
 
 			/**
-			 * $watch for sd.jsonData to become available
+			 * $watch for sd.APIData to become available
 			 *
 			 * @param newVal {*}
 			 * @param oldVal {*}
 			 * @private
 			 */
-			function _$watchJsonData(newVal, oldVal) {
+			function _$watchAPIData(newVal, oldVal) {
 				if (newVal) {
-					sd.jsonData = newVal;
+					sd.APIData = newVal;
 
 					$timeout(function() {
 						console.log('demonstrate $timeout injection in a directive link function');

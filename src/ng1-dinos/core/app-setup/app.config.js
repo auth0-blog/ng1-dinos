@@ -3,7 +3,7 @@
 	'use strict';
 
 	angular
-		.module('ng1-sw')
+		.module('ng1-dinos')
 		.config(appConfig);
 
 	appConfig.$inject = ['$routeProvider', '$locationProvider'];
@@ -11,12 +11,12 @@
 	function appConfig($routeProvider, $locationProvider) {
 		$routeProvider
 			.when('/', {
-				templateUrl: 'ng1-sw/pages/home/Home.view.html',
+				templateUrl: 'ng1-dinos/pages/home/Home.view.html',
 				controller: 'HomeCtrl',
 				controllerAs: 'home'
 			})
 			.when('/subpage', {
-				templateUrl: 'ng1-sw/pages/sub/Sub.view.html',
+				templateUrl: 'ng1-dinos/pages/sub/Sub.view.html',
 				controller: 'SubCtrl',
 				controllerAs: 'sub',
 				resolve: {
@@ -24,7 +24,7 @@
 				}
 			})
 			.otherwise({
-				templateUrl: 'ng1-sw/pages/error404/Error404.view.html',
+				templateUrl: 'ng1-dinos/pages/error404/Error404.view.html',
 				controller: 'Error404Ctrl',
 				controllerAs: 'e404'
 			});
@@ -36,14 +36,14 @@
 			.hashPrefix('!');
 	}
 
-	resolveLocalData.$inject = ['JSONData'];
+	resolveLocalData.$inject = ['APIData'];
 	/**
 	 * Get local data for route resolve
 	 *
-	 * @param JSONData {factory}
+	 * @param APIData {factory}
 	 * @returns {promise} data
 	 */
-	function resolveLocalData(JSONData) {
-		return JSONData.getLocalData();
+	function resolveLocalData(APIData) {
+		return APIData.getData();
 	}
 }());

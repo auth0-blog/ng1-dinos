@@ -1,4 +1,4 @@
-ng1-sw
+ng1-dinos
 ==========
 
-Sample Angular 1.x application using the (Star Wars API)[http://swapi.co]
+Sample Angular 1.x application with sample API.

@@ -2,12 +2,12 @@
 	'use strict';
 
 	angular
-		.module('ng1-sw')
+		.module('ng1-dinos')
 		.controller('HomeCtrl', HomeCtrl);
 
-	HomeCtrl.$inject = ['$scope', 'Utils', 'Metadata', 'JSONData'];
+	HomeCtrl.$inject = ['$scope', 'Utils', 'Metadata', 'APIData'];
 
-	function HomeCtrl($scope, Utils, Metadata, JSONData) {
+	function HomeCtrl($scope, Utils, Metadata, APIData) {
 		// controllerAs ViewModel
 		var home = this;
 
@@ -27,7 +27,7 @@
 		 */
 		function _init() {
 			// set page <title>
-			Metadata.set(home.title, 'ng1-sw, angularjs, javascript, spa, demo, app, application', 'ng1-sw demo application');
+			Metadata.set(home.title, 'ng1-dinos, angularjs, javascript, spa, demo, app, application', 'ng1-dinos demo application');
 
 			// activate controller
 			_activate();
@@ -45,7 +45,7 @@
 			$scope.$emit('loading-on');
 
 			// get the data from JSON
-			return JSONData.getLocalData().then(_getJsonSuccess);
+			return APIData.getData('people').then(_getJsonSuccess);
 		}
 
 		/**
@@ -59,6 +59,8 @@
 
 			// stop loading
 			$scope.$emit('loading-off');
+
+			console.log(home.json);
 
 			return home.json;
 		}

@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('ng1-sw')
+		.module('ng1-dinos')
 		.controller('PageCtrl', PageCtrl);
 
 	PageCtrl.$inject = ['Metadata', '$scope', '$log'];

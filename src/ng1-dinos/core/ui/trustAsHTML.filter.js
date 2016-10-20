@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('ng1-sw')
+		.module('ng1-dinos')
 		.filter('trustAsHTML', trustAsHTML);
 
 	trustAsHTML.$inject = ['$sce'];

@@ -1,12 +1,12 @@
 {
-  "name": "ng1-sw",
+  "name": "ng1-dinos",
   "version": "0.0.1",
   "author": "Auth0",
   "description": "Angular 1 sample Single Page Application with API",
   "main": "index.html",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kmaida/ng1-sw.git"
+    "url": "https://github.com/kmaida/ng1-dinos.git"
   },
   "keywords": [
     "angular",
@@ -16,12 +16,12 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kmaida/ng1-sw/issues"
+    "url": "https://github.com/kmaida/ng1-dinos/issues"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/kmaida/ng1-sw",
+  "homepage": "https://github.com/kmaida/ng1-dinos",
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
