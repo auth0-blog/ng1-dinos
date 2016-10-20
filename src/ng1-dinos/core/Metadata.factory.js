@@ -6,7 +6,7 @@
 		.factory('Metadata', Metadata);
 
 	function Metadata() {
-		var siteTitle = 'ng1 Star Wars';
+		var siteTitle = 'ng1 Dinosaurs';
 		var pageTitle = '';
 		var keywords = '';
 		var desc = '';

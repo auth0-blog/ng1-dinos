@@ -11,5 +11,9 @@
 		</div>
 
 		<h2>{{::home.global.greeting}}, {{home.name}}!</h2>
+
+		<ul>
+			<li ng-repeat="dino in home.dinos">{{::dino.name}}</li>
+		</ul>
 	</section>
 </article>

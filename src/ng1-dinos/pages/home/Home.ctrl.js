@@ -16,7 +16,6 @@
 		home.global = Utils;
 		home.name = 'Visitor';
 		home.alertGreeting = Utils.alertGreeting;
-		home.stringOfHTML = '<strong style="color: green;">Some green text</strong> bound as HTML with a <a href="#">link</a>, trusted with SCE!';
 
 		_init();
 
@@ -45,7 +44,7 @@
 			$scope.$emit('loading-on');
 
 			// get the data from JSON
-			return APIData.getData('people').then(_getJsonSuccess);
+			return APIData.getAllDinos().then(_getJsonSuccess);
 		}
 
 		/**
@@ -55,14 +54,14 @@
 		 * @private
 		 */
 		function _getJsonSuccess(data) {
-			home.json = data;
+			home.dinos = data;
 
 			// stop loading
 			$scope.$emit('loading-off');
 
-			console.log(home.json);
+			console.log(home.dinos);
 
-			return home.json;
+			return home.dinos;
 		}
 	}
 }());

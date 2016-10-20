@@ -9,46 +9,34 @@
 	APIData.$inject = ['$http', 'Res'];
 
 	function APIData($http, Res) {
-		var _API = 'http://swapi.co/api/';
+		var _API = 'http://localhost:3001/api/';
 
 		// callable members
 		return {
-			getPeople: getPeople,
-			getDataByRoute: getDataByRoute
+			getAllDinos: getAllDinos,
+			getDino: getDino
 		};
 
 		/**
-		 * GET SW people and return results
+		 * GET all dinosaurs and return results
 		 *
 		 * @returns {promise}
 		 */
-		function getPeople() {
+		function getAllDinos() {
 			return $http
-				.get(_API + '?format=json')
+				.get(_API + 'dinosaurs')
 				.then(Res.success, Res.error);
 		}
 
 		/**
+		 * GET a specific dinosaur and return results
 		 * 
-		 * 
-		 * @param {any} id
+		 * @param {Integer} id
 		 * @returns
 		 */
-		function getPerson(id) {
+		function getDino(id) {
 			return $http
-				.get('http://swapi.co/api/' + _id + '?format=json')
-				.then(Res.success, Res.error);
-		}
-
-		/**
-		 * GET requested data and return results
-		 *
-		 * @param url {String} full URL of API route
-		 * @returns {promise}
-		 */
-		function getDataByRoute(url) {
-			return $http
-				.get(url)
+				.get(_API + _id)
 				.then(Res.success, Res.error);
 		}
 	}

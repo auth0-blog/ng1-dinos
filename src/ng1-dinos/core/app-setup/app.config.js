@@ -20,7 +20,7 @@
 				controller: 'SubCtrl',
 				controllerAs: 'sub',
 				resolve: {
-					resolveLocalData: resolveLocalData
+					resolveData: resolveData
 				}
 			})
 			.otherwise({
@@ -36,14 +36,14 @@
 			.hashPrefix('!');
 	}
 
-	resolveLocalData.$inject = ['APIData'];
+	resolveData.$inject = ['APIData'];
 	/**
-	 * Get local data for route resolve
+	 * Get data for route resolve
 	 *
 	 * @param APIData {factory}
 	 * @returns {promise} data
 	 */
-	function resolveLocalData(APIData) {
-		return APIData.getData();
+	function resolveData(APIData) {
+		return APIData.getAllDinos();
 	}
 }());

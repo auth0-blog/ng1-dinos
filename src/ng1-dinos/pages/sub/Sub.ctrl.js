@@ -5,16 +5,16 @@
 		.module('ng1-dinos')
 		.controller('SubCtrl', SubCtrl);
 
-	SubCtrl.$inject = ['Utils', 'Metadata', 'resolveLocalData'];
+	SubCtrl.$inject = ['Utils', 'Metadata', 'resolveData'];
 
-	function SubCtrl(Utils, Metadata, resolveLocalData) {
+	function SubCtrl(Utils, Metadata, resolveData) {
 		// controllerAs ViewModel
 		var sub = this;
 
 		// bindable members
 		sub.title = 'Subpage';
 		sub.global = Utils;
-		sub.json = resolveLocalData;
+		sub.dinos = resolveData;
 
 		_init();
 
