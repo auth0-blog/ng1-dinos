@@ -1,26 +1,31 @@
-<article id="content-wrapper" class="content-wrapper home-wrapper">
-	<section id="content-main" class="content-main home-content clearfix" ng-cloak>
-		<h1 class="content-heading text-center" ng-bind="::home.title"></h1>
+<article id="content-wrapper" class="content-wrapper home-wrapper" ng-cloak>
 
-		<!-- Search dinosaurs -->
-		<section id="search" class="home-content-search input-group">
-			<label class="input-group-addon" for="search">Search</label>
-			<input id="search" type="text" ng-model="query" class="form-control" />
-			<span class="input-group-btn">
-				<button class="btn btn-danger" ng-click="query = ''" ng-disabled="!query">&times;</button>
-			</span>
-		</section>
+	<h2 class="content-heading" ng-bind="::home.title"></h2>
 
-		<!-- Dinosaurs -->
-		<section ng-if="home.dinos" id="dinosaurs" class="home-content-dinosaurs row">
-			<div class="col-sm-12 col-md-4" ng-repeat="dino in home.dinos | filter:query">
-				<dino-card data="dino"></dino-card>
-			</div>
-		</section>
-
-		<!-- Error -->
-		<p ng-if="home.error" class="alert alert-danger">
-			<strong>Rawr!</strong> There was an error retrieving dinosaur data.
-		</p>
+	<!-- Search dinosaurs -->
+	<section class="home-search input-group">
+		<label class="input-group-addon" for="search">Search</label>
+		<input id="search" type="text" ng-model="query" class="form-control" />
+		<span class="input-group-btn">
+			<button class="btn btn-danger" ng-click="query = ''" ng-disabled="!query">&times;</button>
+		</span>
 	</section>
+
+	<!-- Dinosaurs -->
+	<section ng-if="home.dinos" class="row">
+		<div class="col-sm-12 col-md-4" ng-repeat="dino in home.dinos | filter:query">
+			<dino-card data="dino"></dino-card>
+		</div>
+	</section>
+
+	<!-- No search results -->
+	<p ng-if="!(home.dinos | filter:query).length" class="alert alert-warning">
+		No information available on a dinosaur called <em class="text-danger">{{query}}</em>, sorry!
+	</p>
+
+	<!-- Error -->
+	<p ng-if="home.error" class="alert alert-danger">
+		<strong>Rawr!</strong> There was an error retrieving dinosaur data.
+	</p>
+
 </article>
