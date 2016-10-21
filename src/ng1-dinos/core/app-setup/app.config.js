@@ -15,6 +15,11 @@
 				controller: 'HomeCtrl',
 				controllerAs: 'home'
 			})
+			.when('/about', {
+				templateUrl: 'ng1-dinos/pages/about/About.view.html',
+				controller: 'AboutCtrl',
+				controllerAs: 'about'
+			})
 			.when('/dinosaur/:id', {
 				templateUrl: 'ng1-dinos/pages/detail/Detail.view.html',
 				controller: 'DetailCtrl',

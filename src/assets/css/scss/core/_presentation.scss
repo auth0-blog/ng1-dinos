@@ -17,15 +17,8 @@ body {
 	padding: $padding-screen-small;
 
 	@include mq($large) {
+		margin: 0 auto;
+		max-width: 960px;
 		padding: $padding-screen-large;
-	}
-}
-.content-heading {
-	font-size: 36px;
-	margin: -1.5% 0 20px;
-
-	@include mq($large) {
-		margin-top: 0;
-		text-align: center;
 	}
 }

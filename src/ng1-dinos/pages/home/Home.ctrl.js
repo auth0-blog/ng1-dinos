@@ -5,17 +5,14 @@
 		.module('ng1-dinos')
 		.controller('HomeCtrl', HomeCtrl);
 
-	HomeCtrl.$inject = ['$scope', 'Utils', 'Metadata', 'APIData'];
+	HomeCtrl.$inject = ['$scope', 'Metadata', 'APIData'];
 
-	function HomeCtrl($scope, Utils, Metadata, APIData) {
+	function HomeCtrl($scope, Metadata, APIData) {
 		// controllerAs ViewModel
 		var home = this;
 
 		// bindable members
-		home.title = 'Home';
-		home.global = Utils;
-		home.name = 'Visitor';
-		home.alertGreeting = Utils.alertGreeting;
+		home.title = 'All Dinosaurs';
 
 		_init();
 
@@ -25,8 +22,8 @@
 		 * @private
 		 */
 		function _init() {
-			// set page <title>
-			Metadata.set(home.title, 'ng1-dinos, angularjs, javascript, spa, demo, app, application', 'ng1-dinos demo application');
+			// set page <title> and keywords
+			Metadata.set(home.title, 'ng1-dinos, dinosaurs, angularjs, javascript, spa, demo, app, application', 'ng1-dinos demo application');
 
 			// activate controller
 			_activate();
@@ -36,7 +33,7 @@
 		 * Controller activate
 		 * Get JSON data
 		 *
-		 * @returns {*}
+		 * @returns {any}
 		 * @private
 		 */
 		function _activate() {
@@ -44,7 +41,7 @@
 			$scope.$emit('loading-on');
 
 			// get the data from JSON
-			return APIData.getAllDinos().then(_getJsonSuccess);
+			return APIData.getAllDinos().then(_getJsonSuccess, _getJsonError);
 		}
 
 		/**
@@ -59,9 +56,14 @@
 			// stop loading
 			$scope.$emit('loading-off');
 
-			console.log(home.dinos);
-
 			return home.dinos;
+		}
+
+		/**
+		 * Failure of promise data
+		 */
+		function _getJsonError() {
+			home.error = true;
 		}
 	}
 }());

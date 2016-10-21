@@ -1,19 +1,26 @@
 <article id="content-wrapper" class="content-wrapper home-wrapper">
 	<section id="content-main" class="content-main home-content clearfix" ng-cloak>
-		<h1 class="content-heading" ng-bind="::home.title"></h1>
+		<h1 class="content-heading text-center" ng-bind="::home.title"></h1>
 
-		<div class="input-group">
-			<span class="input-group-label middle">Name:</span>
-			<input type="text" ng-model="home.name" class="input-group-field" />
-			<div class="input-group-button">
-				<button ng-click="home.alertGreeting(home.name)" class="button">Greet</button>
+		<!-- Search dinosaurs -->
+		<section id="search" class="home-content-search input-group">
+			<label class="input-group-addon" for="search">Search</label>
+			<input id="search" type="text" ng-model="query" class="form-control" />
+			<span class="input-group-btn">
+				<button class="btn btn-danger" ng-click="query = ''" ng-disabled="!query">&times;</button>
+			</span>
+		</section>
+
+		<!-- Dinosaurs -->
+		<section ng-if="home.dinos" id="dinosaurs" class="home-content-dinosaurs row">
+			<div class="col-sm-12 col-md-4" ng-repeat="dino in home.dinos | filter:query">
+				<dino-card data="dino"></dino-card>
 			</div>
-		</div>
+		</section>
 
-		<h2>{{::home.global.greeting}}, {{home.name}}!</h2>
-
-		<ul>
-			<li ng-repeat="dino in home.dinos">{{::dino.name}}</li>
-		</ul>
+		<!-- Error -->
+		<p ng-if="home.error" class="alert alert-danger">
+			<strong>Rawr!</strong> There was an error retrieving dinosaur data.
+		</p>
 	</section>
 </article>

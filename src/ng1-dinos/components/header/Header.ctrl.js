@@ -15,17 +15,6 @@
 		header.indexIsActive = indexIsActive;
 		header.navIsActive = navIsActive;
 
-		_init();
-
-		/**
-		 * INIT function executes procedural code
-		 *
-		 * @private
-		 */
-		function _init() {
-			
-		}
-
 		/**
 		 * Apply class to index nav if active
 		 *

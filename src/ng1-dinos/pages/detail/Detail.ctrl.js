@@ -10,6 +10,8 @@
 	function DetailCtrl($scope, $routeParams, Metadata, APIData) {
 		// controllerAs ViewModel
 		var detail = this;
+
+		// private variables
 		var _id = $routeParams.id;
 
 		_init();
@@ -35,7 +37,7 @@
 			$scope.$emit('loading-on');
 
 			// get the data from JSON
-			return APIData.getDino(_id).then(_getJsonSuccess);
+			return APIData.getDino(_id).then(_getJsonSuccess, _getJsonError);
 		}
 
 		/**
@@ -48,15 +50,20 @@
 			detail.dino = data;
 			detail.title = detail.dino.name;
 
-			// set page <title>
-			Metadata.set(detail.title, 'angularjs, subpage', 'ng1-dinos-angular sample subpage with directive and transclusion.');
+			// set page <title> and keywords
+			Metadata.set(detail.title, 'dinosaur, ' + detail.dino.name + ', ' + detail.dino.period);
 
 			// stop loading
 			$scope.$emit('loading-off');
 
-			console.log(detail.dino);
-
 			return detail.dino;
+		}
+
+		/**
+		 * Failure of promise data
+		 */
+		function _getJsonError() {
+			detail.error = true;
 		}
 	}
 }());

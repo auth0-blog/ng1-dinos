@@ -23,9 +23,6 @@
 		function _init() {
 			// set page <title>
 			Metadata.set(e404.title, 'error', 'Error 404 - page not found');
-
-			// no data to load, but loading state might be on
-			$scope.$emit('loading-off');
 		}
 	}
 }());

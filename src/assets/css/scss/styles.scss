@@ -19,13 +19,15 @@
 @import 'core/layout';
 @import 'core/print';
 
-/*-- Modules --*/
+/*-- Components --*/
 
-@import 'modules/header';
-@import 'modules/nav';
-@import 'modules/footer';
-@import 'modules/loading';
+@import 'components/header';
+@import 'components/nav';
+@import 'components/footer';
+@import 'components/loading';
 
 /*-- Pages --*/
 
+@import 'pages/home';
+@import 'pages/detail';
 @import 'pages/404';
