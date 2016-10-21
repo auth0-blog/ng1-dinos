@@ -32,7 +32,3 @@ select option,
 textarea {
 	font-size: 16px;	/* for iOS to prevent autozoom */
 }
-input.ng-dirty.ng-invalid {
-	border-color: $color-invalid-rgba;
-	box-shadow: 0 0 6px $color-invalid-rgba;
-}

@@ -3,8 +3,7 @@
 --------------------*/
 
 .header-page {
-	background: $color-nav-bg;
-	color: $color-white;
+	color: #fff;
 	height: 50px;
 	margin-bottom: 10px;
 	position: relative;
@@ -15,7 +14,7 @@
 		margin: 0;
 		padding: 0 0 0 50px;
 		position: absolute;
-		top: 0;
+			top: 0;
 		text-align: center;
 		width: 100%;
 	}

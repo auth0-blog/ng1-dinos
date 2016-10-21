@@ -3,5 +3,5 @@
 	'use strict';
 
 	angular
-		.module('ng1-dinos', ['ngRoute', 'ngResource', 'resize']);
+		.module('ng1-dinos', ['ngRoute', 'ngResource', 'ngSanitize', 'resize']);
 }());

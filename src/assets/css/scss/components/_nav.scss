@@ -2,11 +2,10 @@
 	 NAVIGATION
 --------------------*/
 
-/*------------------------------------------------------------------------- Hamburger menu toggle --*/
+/*-------------------------------------------------------------------- Hamburger toggle --*/
 
 .toggle-offcanvas {
-	background: $color-nav-bg;
-	border-right: 1px solid $color-disabled-rgba;
+	border-right: 1px solid rgba(255,255,255,.5);
 	display: inline-block;
 	height: 50px;
 	padding: 23.5px 13px;
@@ -18,7 +17,7 @@
 	span,
 	span:before,
 	span:after {
-		background: $color-white;
+		background: #fff;
 		border-radius: 1px;
 		content: '';
 		display: block;
@@ -53,7 +52,7 @@
 	}
 }
 
-/*------------------------------------------------------------------------- Navigation --*/
+/*-------------------------------------------------------------------- Navigation --*/
 
 .header .nav {
 	box-shadow: inset -8px 0 8px -6px rgba(0,0,0,0.2);
