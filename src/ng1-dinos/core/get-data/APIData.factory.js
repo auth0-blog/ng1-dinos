@@ -36,7 +36,7 @@
 		 */
 		function getDino(id) {
 			return $http
-				.get(_API + _id)
+				.get(_API + 'dinosaur/' + id)
 				.then(Res.success, Res.error);
 		}
 	}

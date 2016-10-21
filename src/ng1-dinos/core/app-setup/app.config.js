@@ -15,13 +15,10 @@
 				controller: 'HomeCtrl',
 				controllerAs: 'home'
 			})
-			.when('/subpage', {
-				templateUrl: 'ng1-dinos/pages/sub/Sub.view.html',
-				controller: 'SubCtrl',
-				controllerAs: 'sub',
-				resolve: {
-					resolveData: resolveData
-				}
+			.when('/dinosaur/:id', {
+				templateUrl: 'ng1-dinos/pages/detail/Detail.view.html',
+				controller: 'DetailCtrl',
+				controllerAs: 'detail'
 			})
 			.otherwise({
 				templateUrl: 'ng1-dinos/pages/error404/Error404.view.html',
@@ -34,16 +31,5 @@
 				enabled: true
 			})
 			.hashPrefix('!');
-	}
-
-	resolveData.$inject = ['APIData'];
-	/**
-	 * Get data for route resolve
-	 *
-	 * @param APIData {factory}
-	 * @returns {promise} data
-	 */
-	function resolveData(APIData) {
-		return APIData.getAllDinos();
 	}
 }());
