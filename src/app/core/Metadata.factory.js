@@ -6,7 +6,6 @@
 		.factory('Metadata', Metadata);
 
 	function Metadata() {
-		var siteTitle = 'ng1 Dinosaurs';
 		var pageTitle = '';
 
 		// callable members
@@ -21,7 +20,7 @@
 		 * @param newTitle {string}
 		 */
 		function set(newTitle) {
-			pageTitle = ' | ' + newTitle;
+			pageTitle = newTitle;
 		}
 
 		/**
@@ -31,7 +30,7 @@
 		 * @returns {string} site title + page title
 		 */
 		function getTitle() {
-			return siteTitle + pageTitle;
+			return pageTitle;
 		}
 	}
 }());
