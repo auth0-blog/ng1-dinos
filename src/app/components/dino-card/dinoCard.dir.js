@@ -1,9 +1,8 @@
-/*--- Sample Directive with a $watch ---*/
 (function() {
 	'use strict';
 
 	angular
-		.module('ng1-dinos')
+		.module('app')
 		.directive('dinoCard', dinoCard);
 
 	dinoCard.$inject = ['$timeout'];
@@ -14,7 +13,7 @@
 			restrict: 'EA',
 			replace: true,
 			scope: {},
-			templateUrl: 'ng1-dinos/components/dino-card/dinoCard.tpl.html',
+			templateUrl: 'app/components/dino-card/dinoCard.tpl.html',
 			controller: dinoCardCtrl,
 			controllerAs: 'dc',
 			bindToController: {

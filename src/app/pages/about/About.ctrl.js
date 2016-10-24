@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('ng1-dinos')
+		.module('app')
 		.controller('AboutCtrl', AboutCtrl);
 
 	AboutCtrl.$inject = ['$scope', 'Metadata'];
@@ -23,7 +23,7 @@
 		 */
 		function _init() {
 			// set page <title> and keywords
-			Metadata.set(about.title, 'ng1-dinos, dinosaurs, about, prehistory');
+			Metadata.set(about.title, 'app, dinosaurs, about, prehistory');
 		}
 	}
 }());

@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('ng1-dinos')
+		.module('app')
 		.controller('PageCtrl', PageCtrl);
 
 	PageCtrl.$inject = ['Metadata'];

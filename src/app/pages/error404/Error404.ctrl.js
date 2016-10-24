@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('ng1-dinos')
+		.module('app')
 		.controller('Error404Ctrl', Error404Ctrl);
 
 	Error404Ctrl.$inject = ['$scope', 'Metadata'];

@@ -3,7 +3,7 @@
 	'use strict';
 
 	angular
-		.module('ng1-dinos')
+		.module('app')
 		.config(appConfig);
 
 	appConfig.$inject = ['$routeProvider', '$locationProvider'];
@@ -11,22 +11,22 @@
 	function appConfig($routeProvider, $locationProvider) {
 		$routeProvider
 			.when('/', {
-				templateUrl: 'ng1-dinos/pages/home/Home.view.html',
+				templateUrl: 'app/pages/home/Home.view.html',
 				controller: 'HomeCtrl',
 				controllerAs: 'home'
 			})
 			.when('/about', {
-				templateUrl: 'ng1-dinos/pages/about/About.view.html',
+				templateUrl: 'app/pages/about/About.view.html',
 				controller: 'AboutCtrl',
 				controllerAs: 'about'
 			})
 			.when('/dinosaur/:id', {
-				templateUrl: 'ng1-dinos/pages/detail/Detail.view.html',
+				templateUrl: 'app/pages/detail/Detail.view.html',
 				controller: 'DetailCtrl',
 				controllerAs: 'detail'
 			})
 			.otherwise({
-				templateUrl: 'ng1-dinos/pages/error404/Error404.view.html',
+				templateUrl: 'app/pages/error404/Error404.view.html',
 				controller: 'Error404Ctrl',
 				controllerAs: 'e404'
 			});

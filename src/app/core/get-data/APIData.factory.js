@@ -3,7 +3,7 @@
 	'use strict';
 
 	angular
-		.module('ng1-dinos')
+		.module('app')
 		.factory('APIData', APIData);
 
 	APIData.$inject = ['$http', 'Res'];

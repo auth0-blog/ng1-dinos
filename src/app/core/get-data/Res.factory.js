@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('ng1-dinos')
+		.module('app')
 		.factory('Res', Res);
 
 	Res.$inject = ['$rootScope'];

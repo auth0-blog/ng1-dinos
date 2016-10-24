@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('ng1-dinos')
+		.module('app')
 		.directive('navControl', navControl);
 
 	navControl.$inject = ['$window', 'resize'];

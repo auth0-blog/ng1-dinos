@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('ng1-dinos')
+		.module('app')
 		.directive('loading', loading);
 
 	loading.$inject = ['$window', 'resize'];
@@ -12,7 +12,7 @@
 		return {
 			restrict: 'EA',
 			replace: true,
-			templateUrl: 'ng1-dinos/core/ui/loading.tpl.html',
+			templateUrl: 'app/core/ui/loading.tpl.html',
 			transclude: true,
 			controller: loadingCtrl,
 			controllerAs: 'loading',

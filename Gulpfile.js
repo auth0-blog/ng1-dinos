@@ -21,7 +21,7 @@ var concat = require('gulp-concat');
  ********************** Modification to other sections should not be necessary if using default setup
  */
 
-var jsAngularDir = 'ng1-dinos';
+var jsAngularDir = 'app';
 var jsAngularScript = jsAngularDir + '.js';
 var jsUserScript = 'scripts.js';
 var basePath = {

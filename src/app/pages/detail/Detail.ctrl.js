@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('ng1-dinos')
+		.module('app')
 		.controller('DetailCtrl', DetailCtrl);
 
 	DetailCtrl.$inject = ['$scope', '$routeParams', 'Metadata', 'APIData'];

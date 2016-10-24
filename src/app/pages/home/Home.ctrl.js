@@ -2,7 +2,7 @@
 	'use strict';
 
 	angular
-		.module('ng1-dinos')
+		.module('app')
 		.controller('HomeCtrl', HomeCtrl);
 
 	HomeCtrl.$inject = ['$scope', 'Metadata', 'APIData'];
