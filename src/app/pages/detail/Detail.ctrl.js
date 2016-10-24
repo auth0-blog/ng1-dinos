@@ -50,8 +50,8 @@
 			detail.dino = data;
 			detail.title = detail.dino.name;
 
-			// set page <title> and keywords
-			Metadata.set(detail.title, 'dinosaur, ' + detail.dino.name + ', ' + detail.dino.period);
+			// set page <title>
+			Metadata.set(detail.title);
 
 			// stop loading
 			$scope.$emit('loading-off');

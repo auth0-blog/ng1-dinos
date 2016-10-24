@@ -22,7 +22,7 @@
 		 */
 		function _init() {
 			// set page <title>
-			Metadata.set(e404.title, 'error', 'Error 404 - page not found');
+			Metadata.set(e404.title);
 		}
 	}
 }());

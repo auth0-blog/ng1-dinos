@@ -22,8 +22,8 @@
 		 * @private
 		 */
 		function _init() {
-			// set page <title> and keywords
-			Metadata.set(home.title, 'ng1-dinos, dinosaurs, angularjs, javascript, spa, demo, app, application', 'ng1-dinos demo application');
+			// set page <title>
+			Metadata.set(home.title);
 
 			// activate controller
 			_activate();

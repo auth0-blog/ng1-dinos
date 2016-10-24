@@ -22,8 +22,8 @@
 		 * @private
 		 */
 		function _init() {
-			// set page <title> and keywords
-			Metadata.set(about.title, 'app, dinosaurs, about, prehistory');
+			// set page <title>
+			Metadata.set(about.title);
 		}
 	}
 }());
