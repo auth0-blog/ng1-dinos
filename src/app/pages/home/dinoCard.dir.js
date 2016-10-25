@@ -15,7 +15,7 @@
 			controller: dinoCardCtrl,
 			controllerAs: 'dc',
 			bindToController: {
-				data: '='
+				dino: '='
 			}
 		};
 	}
@@ -26,9 +26,6 @@
 	 */
 	function dinoCardCtrl() {
 		var dc = this;
-
-		// bindable members
-		dc.dino = dc.data;
 	}
 
 }());
