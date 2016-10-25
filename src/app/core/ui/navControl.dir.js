@@ -19,14 +19,14 @@
 		 *
 		 * @param $scope
 		 */
-		function navControlLink($scope) {
+		function navControlLink($scope, $element) {
 			// private variables
 			var _$body = angular.element('body');
-			var _$layoutCanvas = _$body.find('.layout-canvas');
-			var _navOpen;
+			var _$layoutCanvas = $element;
 
 			// data model
 			$scope.nav = {};
+			$scope.nav.navOpen;
 			$scope.nav.toggleNav = toggleNav;
 
 			_init();
@@ -65,11 +65,7 @@
 			 * @private
 			 */
 			function _openNav() {
-				_$body
-					.removeClass('nav-closed')
-					.addClass('nav-open');
-
-				_navOpen = true;
+				$scope.nav.navOpen = true;
 			}
 
 			/**
@@ -78,29 +74,21 @@
 			 * @private
 			 */
 			function _closeNav() {
-				_$body
-					.removeClass('nav-open')
-					.addClass('nav-closed');
-
-				_navOpen = false;
+				$scope.nav.navOpen = false;
 			}
 
 			/**
 			 * Toggle nav open/closed
 			 */
 			function toggleNav() {
-				if (!_navOpen) {
-					_openNav();
-				} else {
-					_closeNav();
-				}
+				$scope.nav.navOpen = !$scope.nav.navOpen;
 			}
 
 			/**
 			 * When changing location, close the nav if it's open
 			 */
 			function _$locationChangeStart() {
-				if (_navOpen) {
+				if ($scope.nav.navOpen) {
 					_closeNav();
 				}
 			}
