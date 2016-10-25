@@ -46,7 +46,7 @@ var path = {
 		dest: basePath.dest + '/' + jsAngularDir + '/'
 	}
 };
-var jsModuleFile = path.jsAngular.src + 'core/app-setup/app.module.js';
+var jsModuleFile = path.jsAngular.src + 'core/app.module.js';
 
 /**
  * Files object
