@@ -5,9 +5,9 @@
 		.module('app')
 		.controller('DetailCtrl', DetailCtrl);
 
-	DetailCtrl.$inject = ['$scope', '$routeParams', 'Metadata', 'APIData'];
+	DetailCtrl.$inject = ['$scope', '$routeParams', 'Metadata', 'Dinos'];
 
-	function DetailCtrl($scope, $routeParams, Metadata, APIData) {
+	function DetailCtrl($scope, $routeParams, Metadata, Dinos) {
 		// controllerAs ViewModel
 		var detail = this;
 
@@ -37,7 +37,7 @@
 			detail.loading = true;
 
 			// get the data from JSON
-			return APIData.getDino(_id).then(_getJsonSuccess, _getJsonError);
+			return Dinos.getDino(_id).then(_getJsonSuccess, _getJsonError);
 		}
 
 		/**

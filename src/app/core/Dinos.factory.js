@@ -4,11 +4,11 @@
 
 	angular
 		.module('app')
-		.factory('APIData', APIData);
+		.factory('Dinos', Dinos);
 
-	APIData.$inject = ['$http', '$q'];
+	Dinos.$inject = ['$http', '$q'];
 
-	function APIData($http, $q) {
+	function Dinos($http, $q) {
 		var _baseUrl = 'http://localhost:3001/api/';
 
 		// callable members

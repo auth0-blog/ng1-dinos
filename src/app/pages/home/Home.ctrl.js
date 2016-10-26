@@ -5,9 +5,9 @@
 		.module('app')
 		.controller('HomeCtrl', HomeCtrl);
 
-	HomeCtrl.$inject = ['$scope', 'Metadata', 'APIData'];
+	HomeCtrl.$inject = ['$scope', 'Metadata', 'Dinos'];
 
-	function HomeCtrl($scope, Metadata, APIData) {
+	function HomeCtrl($scope, Metadata, Dinos) {
 		// controllerAs ViewModel
 		var home = this;
 
@@ -41,7 +41,7 @@
 			home.loading = true;
 
 			// get the data from JSON
-			return APIData.getAllDinos().then(_getJsonSuccess, _getJsonError);
+			return Dinos.getAllDinos().then(_getJsonSuccess, _getJsonError);
 		}
 
 		/**
