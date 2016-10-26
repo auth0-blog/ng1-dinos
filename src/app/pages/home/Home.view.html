@@ -1,7 +1,7 @@
 <article id="content-wrapper" class="content-wrapper home-wrapper" ng-cloak>
 	<h2 class="content-heading" ng-bind="::home.title"></h2>
 
-	<loading active="home.loading"></loading>
+	<loading ng-if="home.loading"></loading>
 
 	<div ng-if="home.loading === false">
 		<!-- Search dinosaurs -->
