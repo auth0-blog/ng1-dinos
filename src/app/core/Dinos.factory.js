@@ -65,7 +65,7 @@
 		 */
 		function _handleError(err) {
 			var errorMsg = err.message || 'Unable to retrieve data';
-			throw new Error('API ERROR:', errorMsg);
+			throw new Error(errorMsg);
 		}
 	}
 }());

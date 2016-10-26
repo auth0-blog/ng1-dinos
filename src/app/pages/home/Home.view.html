@@ -21,7 +21,7 @@
 		</section>
 
 		<!-- No search results -->
-		<p ng-if="!(home.dinos | filter:query).length && query && !home.error" class="alert alert-warning">
+		<p ng-if="dinos && !(home.dinos | filter:query).length && query && !home.error" class="alert alert-warning">
 			No information available on a dinosaur called <em class="text-danger">{{query}}</em>, sorry!
 		</p>
 
