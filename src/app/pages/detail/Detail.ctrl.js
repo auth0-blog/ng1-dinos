@@ -34,7 +34,7 @@
 		 */
 		function _activate() {
 			// start loading
-			$scope.$emit('loading-on');
+			detail.loading = true;
 
 			// get the data from JSON
 			return APIData.getDino(_id).then(_getJsonSuccess, _getJsonError);
@@ -54,16 +54,21 @@
 			Metadata.set(detail.title);
 
 			// stop loading
-			$scope.$emit('loading-off');
+			detail.loading = false;
 
 			return detail.dino;
 		}
 
 		/**
 		 * Failure of promise data
+		 * Show error 
+		 * Stop loading
 		 */
 		function _getJsonError() {
 			detail.error = true;
+
+			// stop loading
+			detail.loading = false;
 		}
 	}
 }());

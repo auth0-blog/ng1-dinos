@@ -5,9 +5,9 @@
 		.module('app')
 		.factory('Res', Res);
 
-	Res.$inject = ['$rootScope'];
-
-	function Res($rootScope) {
+	Res.$inject = [];
+	
+	function Res() {
 		// callable members
 		return {
 			success: success,
@@ -32,13 +32,11 @@
 
 		/**
 		 * Promise response function - error
-		 * Ends loading spinner
 		 * Throws an error with error data
 		 *
 		 * @param error {object}
 		 */
 		function error(error) {
-			$rootScope.$broadcast('loading-off');
 			throw new Error('Error retrieving data', error);
 		}
 	}

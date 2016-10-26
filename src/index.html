@@ -22,32 +22,39 @@
 
 	<body>
 		<div class="layout-overflow">
-			<div class="layout-canvas" nav-control ng-class="{'nav-open': nav.navOpen, 'nav-closed': !nav.navOpen}">
+			<div 
+				class="layout-canvas" 
+				nav-control 
+				ng-class="{'nav-open': nav.navOpen, 'nav-closed': !nav.navOpen}">
 			
-			<!-- HEADER -->
-				<header id="header" class="header clearfix" ng-include="'app/header/header.tpl.html'"></header>
+				<!-- HEADER -->
+				<header 
+					id="header" 
+					class="header" 
+					ng-include="'app/header/header.tpl.html'"></header>
 
-			<!-- CONTENT (Angular View) -->
-				<div id="layout-view" class="layout-view" ng-view autoscroll="true"></div>
+				<!-- CONTENT (Angular View) -->
+				<div
+					id="layout-view" 
+					class="layout-view" 
+					ng-view autoscroll="true"></div>
 
-			<!-- FOOTER -->
-				<footer id="footer" class="footer clearfix" ng-include="'app/footer/footer.tpl.html'"></footer>
+				<!-- FOOTER -->
+				<footer 
+					id="footer" 
+					class="footer clearfix" 
+					ng-include="'app/footer/footer.tpl.html'"></footer>
 
 			</div> <!-- /.layout-canvas -->
 		</div> <!-- /.layout-overflow -->
 
-		<loading></loading>
-
-		<!-- JS Libraries -->
-		<!-- concatenated and minified -->
+		<!-- JS vendor libraries -->
 		<script src="/assets/js/vendor/vendor.js"></script>
 
 		<!-- Angular app JS -->
-		<!-- dev: concatenated; production: concatenated and minified -->
 		<script src="/app/app.js"></script>
 		
-		<!-- JavaScript -->
-		<!-- dev: concatenated; production: concatenated and minified -->
+		<!-- Local JavaScript -->
 		<script src="/assets/js/scripts.js"></script>
 	</body>
 </html>
