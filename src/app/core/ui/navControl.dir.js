@@ -21,7 +21,6 @@
 		 */
 		function navControlLink($scope, $element) {
 			// private variables
-			var _$body = angular.element('body');
 			var _$layoutCanvas = $element;
 
 			// data model
