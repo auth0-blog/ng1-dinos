@@ -6,9 +6,9 @@
 		.module('app')
 		.factory('APIData', APIData);
 
-	APIData.$inject = ['$http'];
+	APIData.$inject = ['$http', '$q'];
 
-	function APIData($http) {
+	function APIData($http, $q) {
 		var _baseUrl = 'http://localhost:3001/api/';
 
 		// callable members
@@ -39,31 +39,33 @@
 				.get(_baseUrl + 'dinosaur/' + id)
 				.then(_handleSuccess, _handleError);
 		}
-	}
 
-	/**
-	 * Promise response function
-	 * Checks typeof data returned and succeeds if JS object, throws error if not
-	 * Useful for APIs (ie, with nginx) where server error HTML page may be returned in error
-	 * 
-	 * @param {any} res
-	 * @returns
-	 */
-	function _handleSuccess(res) {
-		if (angular.isObject(res.data)) {
-			return res.data;
-		} else {
-			_handleError({message: 'retrieved data is not typeof object'});
+		/**
+		 * Promise response function
+		 * Checks typeof data returned:
+		 * Resolves if response is object, rejects if not
+		 * Useful for APIs (ie, with nginx) where server error HTML page may be returned
+		 * 
+		 * @param {any} res
+		 * @returns {promise}
+		 */
+		function _handleSuccess(res) {
+			if (angular.isObject(res.data)) {
+				return res.data;
+			} else {
+				$q.reject({message: 'Retrieved data was not typeof object'});
+			}
 		}
-	}
 
-	/**
-	 * Promise response function - error
-	 * Throws an error with error data
-	 * 
-	 * @param {any} err
-	 */
-	function _handleError(err) {
-		throw new Error('Error retrieving data', error);
+		/**
+		 * Promise response function - error
+		 * Throws an error with error data
+		 * 
+		 * @param {any} err
+		 */
+		function _handleError(err) {
+			var errorMsg = err.message || 'Unable to retrieve data';
+			throw new Error('API ERROR:', errorMsg);
+		}
 	}
 }());
