@@ -33,7 +33,7 @@
 		 * Controller activate
 		 * Get JSON data
 		 *
-		 * @returns {any}
+		 * @returns {*}
 		 * @private
 		 */
 		function _activate() {
@@ -47,7 +47,7 @@
 		/**
 		 * Successful promise data
 		 *
-		 * @param data {json}
+		 * @param data {object}
 		 * @private
 		 */
 		function _getJsonSuccess(data) {

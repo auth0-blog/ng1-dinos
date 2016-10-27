@@ -20,7 +20,6 @@
 		};
 	}
 
-	dinoCardCtrl.$inject = [];
 	/**
 	 * DinoCard CONTROLLER
 	 */

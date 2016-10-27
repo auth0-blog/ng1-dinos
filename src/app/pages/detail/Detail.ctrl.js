@@ -43,7 +43,7 @@
 		/**
 		 * Successful promise data
 		 *
-		 * @param data {json}
+		 * @param data {object}
 		 * @private
 		 */
 		function _getJsonSuccess(data) {
