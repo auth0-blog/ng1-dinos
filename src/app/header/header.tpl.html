@@ -1,14 +1,15 @@
 <div ng-controller="HeaderCtrl as header">
 	<div class="header-page bg-primary">
 		<a class="toggle-offcanvas bg-primary" ng-click="nav.toggleNav()"><span></span></a>
-		<h1 class="header-page-siteTitle">ng1-dinos</h1>
+		<h1 class="header-page-siteTitle">
+			<a ng-href="/">ng1-dinos</a>
+		</h1>
 	</div>
 
 	<nav id="nav" class="nav" role="navigation">
 		<ul class="nav-list">
 			<li>
-				<a ng-class="{active: header.indexIsActive('/')}"
-				   ng-href="/">All Dinosaurs</a>
+				<a ng-class="{active: header.indexIsActive('/')}" ng-href="/">Dinosaurs</a>
 			</li>
 			<li>
 				<a ng-class="{active: header.navIsActive('/about')}" ng-href="/about">About</a>

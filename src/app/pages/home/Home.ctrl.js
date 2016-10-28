@@ -12,7 +12,7 @@
 		var home = this;
 
 		// bindable members
-		home.title = 'All Dinosaurs';
+		home.title = 'Dinosaurs';
 
 		_init();
 
