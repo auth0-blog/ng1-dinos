@@ -15,10 +15,6 @@ var concat = require('gulp-concat');
 
 /**
  * File paths
- *
- ********************** IMPORTANT:
- ********************** Make sure to update these paths for your project!
- ********************** Modification to other sections should not be necessary if using default setup
  */
 
 var jsAngularDir = 'app';
@@ -51,7 +47,6 @@ var jsModuleFile = path.jsAngular.src + 'core/app.module.js';
 /**
  * Files object
  * Sets up file source arrays for tasks
- * (No modification should be necessary)
  */
 
 var files = {};
@@ -75,7 +70,7 @@ if (gutil.env.prod) {
 /**
  * function errorHandler(err)
  *
- * @param err
+ * @param err {*}
  */
 function errorHandler(err){
 	gutil.beep();
@@ -92,6 +87,8 @@ function errorHandler(err){
  * Write sourcemaps
  * Minify (if production)
  * Save
+ * 
+ * @returns {*}
  */
 function styles() {
 	return gulp.src(files.scssSrc)
@@ -114,6 +111,8 @@ function styles() {
  * Write sourcemaps
  * Uglify / minify (if production)
  * Save
+ * 
+ * @returns {*}
  */
 function jsUser() {
 	return gulp.src(files.jsUserSrcAssets)
@@ -130,6 +129,8 @@ function jsUser() {
  * Concatenate JS vendor files / libraries
  * Uglify / minify
  * Save
+ * 
+ * @returns {*}
  */
 function jsVendor() {
 	return gulp.src(files.jsVendorSrc)
@@ -146,6 +147,8 @@ function jsVendor() {
  * Write sourcemaps
  * Uglify / minify (if production)
  * Save
+ * 
+ * @returns {*}
  */
 function jsAngular() {
 	return gulp.src([jsModuleFile].concat(files.jsUserSrcAngular))
