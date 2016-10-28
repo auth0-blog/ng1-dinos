@@ -1,34 +1,34 @@
 <article id="content-wrapper" class="content-wrapper home-wrapper" ng-cloak>
-	<h2 class="content-heading" ng-bind="::home.title"></h2>
+  <h2 class="content-heading" ng-bind="::home.title"></h2>
 
-	<loading ng-if="home.loading"></loading>
+  <loading ng-if="home.loading"></loading>
 
-	<div ng-if="home.loading === false">
-		<!-- Search dinosaurs -->
-		<section ng-if="home.dinos" class="home-search input-group">
-			<label class="input-group-addon" for="search">Search</label>
-			<input id="search" type="text" ng-model="query" class="form-control" />
-			<span class="input-group-btn">
-				<button class="btn btn-danger" ng-click="query = ''" ng-disabled="!query">&times;</button>
-			</span>
-		</section>
+  <div ng-if="home.loading === false">
+    <!-- Search dinosaurs -->
+    <section ng-if="home.dinos" class="home-search input-group">
+      <label class="input-group-addon" for="search">Search</label>
+      <input id="search" type="text" ng-model="query" class="form-control" />
+      <span class="input-group-btn">
+        <button class="btn btn-danger" ng-click="query = ''" ng-disabled="!query">&times;</button>
+      </span>
+    </section>
 
-		<!-- Dinosaurs -->
-		<section ng-if="home.dinos" class="row">
-			<div class="col-sm-12 col-md-4" ng-repeat="dino in home.dinos | filter:query">
-				<dino-card dino="dino"></dino-card>
-			</div>
-		</section>
+    <!-- Dinosaurs -->
+    <section ng-if="home.dinos" class="row">
+      <div class="col-sm-12 col-md-4" ng-repeat="dino in home.dinos | filter:query">
+        <dino-card dino="dino"></dino-card>
+      </div>
+    </section>
 
-		<!-- No search results -->
-		<p ng-if="dinos && !(home.dinos | filter:query).length && query && !home.error" class="alert alert-warning">
-			No information available on a dinosaur called <em class="text-danger">{{query}}</em>, sorry!
-		</p>
+    <!-- No search results -->
+    <p ng-if="dinos && !(home.dinos | filter:query).length && query && !home.error" class="alert alert-warning">
+      No information available on a dinosaur called <em class="text-danger">{{query}}</em>, sorry!
+    </p>
 
-		<!-- Error -->
-		<p ng-if="home.error" class="alert alert-danger">
-			<strong>Rawr!</strong> There was an error retrieving dinosaur data.
-		</p>
-	</div>
+    <!-- Error -->
+    <p ng-if="home.error" class="alert alert-danger">
+      <strong>Rawr!</strong> There was an error retrieving dinosaur data.
+    </p>
+  </div>
 
 </article>

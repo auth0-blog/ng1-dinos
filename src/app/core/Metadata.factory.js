@@ -1,36 +1,37 @@
 (function() {
-	'use strict';
+  'use strict';
 
-	angular
-		.module('app')
-		.factory('Metadata', Metadata);
+  angular
+    .module('app')
+    .factory('Metadata', Metadata);
 
-	function Metadata() {
-		var pageTitle = '';
+  function Metadata() {
+    var pageTitle = '';
 
-		// callable members
-		return {
-			set: set,
-			getTitle: getTitle
-		};
+    // callable members
+    return {
+      set: set,
+      getTitle: getTitle
+    };
 
-		/**
-		 * Set page title, description
-		 *
-		 * @param newTitle {string}
-		 */
-		function set(newTitle) {
-			pageTitle = newTitle;
-		}
+    /**
+     * Set page title, description
+     *
+     * @param newTitle {string}
+     */
+    function set(newTitle) {
+      pageTitle = newTitle;
+    }
 
-		/**
-		 * Get title
-		 * Returns site title and page title
-		 *
-		 * @returns {string} site title + page title
-		 */
-		function getTitle() {
-			return pageTitle;
-		}
-	}
+    /**
+     * Get title
+     * Returns site title and page title
+     *
+     * @returns {string} site title + page title
+     */
+    function getTitle() {
+      return pageTitle;
+    }
+  }
+  
 }());

@@ -1,16 +1,16 @@
 (function() {
-	'use strict';
+  'use strict';
 
-	angular
-		.module('app')
-		.directive('loading', loading);
-	
-	function loading() {
-		// return directive
-		return {
-			restrict: 'EA',
-			template: '<img class="loading" src="/assets/images/ajax-loader.gif">'
-		};
-	}
+  angular
+    .module('app')
+    .directive('loading', loading);
 
+  function loading() {
+    // return directive
+    return {
+      restrict: 'EA',
+      template: '<img class="loading" src="/assets/images/ajax-loader.gif">'
+    };
+  }
+  
 }());

@@ -1,29 +1,30 @@
 (function() {
-	'use strict';
+  'use strict';
 
-	angular
-		.module('app')
-		.controller('AboutCtrl', AboutCtrl);
+  angular
+    .module('app')
+    .controller('AboutCtrl', AboutCtrl);
 
-	AboutCtrl.$inject = ['$scope', 'Metadata'];
+  AboutCtrl.$inject = ['$scope', 'Metadata'];
 
-	function AboutCtrl($scope, Metadata) {
-		// controllerAs ViewModel
-		var about = this;
+  function AboutCtrl($scope, Metadata) {
+    // controllerAs ViewModel
+    var about = this;
 
-		// bindable members
-		about.title = 'About';
+    // bindable members
+    about.title = 'About';
 
-		_init();
+    _init();
 
-		/**
-		 * INIT function executes procedural code
-		 *
-		 * @private
-		 */
-		function _init() {
-			// set page <title>
-			Metadata.set(about.title);
-		}
-	}
+    /**
+     * INIT function executes procedural code
+     *
+     * @private
+     */
+    function _init() {
+      // set page <title>
+      Metadata.set(about.title);
+    }
+  }
+  
 }());

@@ -1,14 +1,14 @@
 /*--------------------
-	   BASICS
+       BASICS
 --------------------*/
 
 /*-- Cursor --*/
 
-a, 
-input[type=button], 
-input[type=submit], 
-button { 
-	cursor: pointer; 
+a,
+input[type=button],
+input[type=submit],
+button {
+  cursor: pointer;
 }
 
 /*-- ng-cloak: prevent FOUC before Angular JavaScript loads --*/
@@ -19,7 +19,7 @@ button {
 [x-ng-cloak],
 .ng-cloak,
 .x-ng-cloak {
-	display: none !important;
+  display: none !important;
 }
 
 /*-- Forms --*/
@@ -30,5 +30,5 @@ input[type="password"],
 input[type="date"],
 select option,
 textarea {
-	font-size: 16px;	/* for iOS to prevent autozoom */
+  font-size: 16px;	/* for iOS to prevent autozoom */
 }
