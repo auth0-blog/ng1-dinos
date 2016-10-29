@@ -13,6 +13,8 @@
 
     // bindable members
     home.title = 'Dinosaurs';
+    home.query = '';
+    home.resetQuery = resetQuery;
 
     _init();
 
@@ -69,6 +71,13 @@
 
       // stop loading
       home.loading = false;
+    }
+
+    /**
+     * Reset search query
+     */
+    function resetQuery() {
+      home.query = '';
     }
   }
 

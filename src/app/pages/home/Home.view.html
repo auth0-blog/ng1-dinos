@@ -7,22 +7,22 @@
     <!-- Search dinosaurs -->
     <section ng-if="home.dinos" class="home-search input-group">
       <label class="input-group-addon" for="search">Search</label>
-      <input id="search" type="text" ng-model="query" class="form-control" />
+      <input id="search" type="text" ng-model="home.query" class="form-control" />
       <span class="input-group-btn">
-        <button class="btn btn-danger" ng-click="query = ''" ng-disabled="!query">&times;</button>
+        <button class="btn btn-danger" ng-click="home.resetQuery()" ng-disabled="!home.query">&times;</button>
       </span>
     </section>
 
     <!-- Dinosaurs -->
     <section ng-if="home.dinos" class="row">
-      <div class="col-xs-12 col-sm-4" ng-repeat="dino in home.dinos | filter:query">
+      <div class="col-xs-12 col-sm-4" ng-repeat="dino in home.dinos | filter:home.query">
         <dino-card dino="dino"></dino-card>
       </div>
     </section>
 
     <!-- No search results -->
-    <p ng-if="dinos && !(home.dinos | filter:query).length && query && !home.error" class="alert alert-warning">
-      No information available on a dinosaur called <em class="text-danger">{{query}}</em>, sorry!
+    <p ng-if="home.dinos && !(home.dinos | filter:home.query).length && home.query && !home.error" class="alert alert-warning">
+      No information available on a dinosaur called <em class="text-danger">{{home.query}}</em>, sorry!
     </p>
 
     <!-- Error -->
