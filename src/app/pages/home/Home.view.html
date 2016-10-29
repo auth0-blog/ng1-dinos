@@ -15,7 +15,7 @@
 
     <!-- Dinosaurs -->
     <section ng-if="home.dinos" class="row">
-      <div class="col-sm-12 col-md-4" ng-repeat="dino in home.dinos | filter:query">
+      <div class="col-xs-12 col-sm-4" ng-repeat="dino in home.dinos | filter:query">
         <dino-card dino="dino"></dino-card>
       </div>
     </section>
