@@ -7,9 +7,18 @@
     <!-- Search dinosaurs -->
     <section ng-if="home.dinos" class="home-search input-group">
       <label class="input-group-addon" for="search">Search</label>
-      <input id="search" type="text" ng-model="home.query" class="form-control" />
+
+      <input
+        id="search"
+        type="text"
+        ng-model="home.query"
+        class="form-control" />
+
       <span class="input-group-btn">
-        <button class="btn btn-danger" ng-click="home.resetQuery()" ng-disabled="!home.query">&times;</button>
+        <button
+          class="btn btn-danger"
+          ng-click="home.resetQuery()"
+          ng-disabled="!home.query">&times;</button>
       </span>
     </section>
 
