@@ -2,58 +2,58 @@
 <!--[if lte IE 8]><html lang="en" class="no-js oldIE ie no-angular"><![endif]-->
 <!--[if IE 9]><html lang="en" class="no-js ie9 ie" ng-app="app" ng-controller="PageCtrl as page" ng-cloak><![endif]-->
 <!--[if gt IE 9|!IE]><!--><html class="no-js" ng-app="app" ng-controller="PageCtrl as page" ng-cloak><!-- <![endif]-->
-	<head>
-		<meta charset="utf-8">
-		<title ng-bind="page.metadata.getTitle()">ng1-dinos</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="author" content="Kim Maida @ Auth0">
-		<meta name="description" content="Learn about some popular as well as obscure dinosaurs!">
-		<base href="/">
+  <head>
+    <meta charset="utf-8">
+    <title ng-bind="page.metadata.getTitle()">ng1-dinos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kim Maida @ Auth0">
+    <meta name="description" content="Learn about some popular as well as obscure dinosaurs!">
+    <base href="/">
 
-		<!-- Stylesheets -->
-		<link 
-			rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" href="/assets/css/styles.css" media="all">	
+    <!-- Stylesheets -->
+    <link 
+      rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/styles.css" media="all">	
 
-		<!-- Early-load vendors -->
-		<script src="/assets/js/vendor/modernizr.min.js"></script>
-	</head>
+    <!-- Early-load vendors -->
+    <script src="/assets/js/vendor/modernizr.min.js"></script>
+  </head>
 
-	<body>
-		<div class="layout-overflow">
-			<div 
-				class="layout-canvas" 
-				nav-control 
-				ng-class="{'nav-open': nav.navOpen, 'nav-closed': !nav.navOpen}">
-			
-				<!-- HEADER -->
-				<header 
-					id="header" 
-					class="header" 
-					ng-include="'app/header/header.tpl.html'"></header>
+  <body>
+    <div class="layout-overflow">
+      <div 
+        class="layout-canvas" 
+        nav-control 
+        ng-class="{'nav-open': nav.navOpen, 'nav-closed': !nav.navOpen}">
+      
+        <!-- HEADER -->
+        <header 
+          id="header" 
+          class="header" 
+          ng-include="'app/header/header.tpl.html'"></header>
 
-				<!-- CONTENT (Angular View) -->
-				<div
-					id="layout-view" 
-					class="layout-view" 
-					ng-view autoscroll="true"></div>
+        <!-- CONTENT (Angular View) -->
+        <div
+          id="layout-view" 
+          class="layout-view" 
+          ng-view autoscroll="true"></div>
 
-				<!-- FOOTER -->
-				<footer 
-					id="footer" 
-					class="footer clearfix" 
-					ng-include="'app/footer/footer.tpl.html'"></footer>
+        <!-- FOOTER -->
+        <footer 
+          id="footer" 
+          class="footer clearfix" 
+          ng-include="'app/footer/footer.tpl.html'"></footer>
 
-			</div> <!-- /.layout-canvas -->
-		</div> <!-- /.layout-overflow -->
+      </div> <!-- /.layout-canvas -->
+    </div> <!-- /.layout-overflow -->
 
-		<!-- JS vendor libraries -->
-		<script src="/assets/js/vendor/vendor.js"></script>
+    <!-- JS vendor libraries -->
+    <script src="/assets/js/vendor/vendor.js"></script>
 
-		<!-- Angular app JS -->
-		<script src="/app/app.js"></script>
-		
-		<!-- Local JavaScript -->
-		<script src="/assets/js/scripts.js"></script>
-	</body>
+    <!-- Angular app JS -->
+    <script src="/app/app.js"></script>
+    
+    <!-- Local JavaScript -->
+    <script src="/assets/js/scripts.js"></script>
+  </body>
 </html>

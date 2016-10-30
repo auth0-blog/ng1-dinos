@@ -21,26 +21,26 @@ var jsAngularDir = 'app';
 var jsAngularScript = jsAngularDir + '.js';
 var jsUserScript = 'scripts.js';
 var basePath = {
-	src: './src',
-	dest: './src'
+  src: './src',
+  dest: './src'
 };
 var path = {
-	css: {
-		src: basePath.src + '/assets/css/scss/',
-		dest: basePath.dest + '/assets/css/'
-	},
-	js: {
-		src: basePath.src + '/assets/js/',
-		dest: basePath.dest + '/assets/js/'
-	},
-	jsVendor: {
-		src: basePath.src + '/assets/js/vendor/',
-		dest: basePath.dest + '/assets/js/vendor/'
-	},
-	jsAngular: {
-		src: basePath.src + '/' + jsAngularDir + '/',
-		dest: basePath.dest + '/' + jsAngularDir + '/'
-	}
+  css: {
+    src: basePath.src + '/assets/css/scss/',
+    dest: basePath.dest + '/assets/css/'
+  },
+  js: {
+    src: basePath.src + '/assets/js/',
+    dest: basePath.dest + '/assets/js/'
+  },
+  jsVendor: {
+    src: basePath.src + '/assets/js/vendor/',
+    dest: basePath.dest + '/assets/js/vendor/'
+  },
+  jsAngular: {
+    src: basePath.src + '/' + jsAngularDir + '/',
+    dest: basePath.dest + '/' + jsAngularDir + '/'
+  }
 };
 var jsModuleFile = path.jsAngular.src + 'core/app.module.js';
 
@@ -64,7 +64,7 @@ files.jsVendorSrc = [path.jsVendor.src + 'jquery.js', path.jsVendor.src + 'angul
 var isProduction = false;
 
 if (gutil.env.prod) {
-	isProduction = true;
+  isProduction = true;
 }
 
 /**
@@ -73,9 +73,9 @@ if (gutil.env.prod) {
  * @param err {*}
  */
 function errorHandler(err){
-	gutil.beep();
-	gutil.log(gutil.colors.red('Error: '), err.message);
-	this.emit('end');
+  gutil.beep();
+  gutil.log(gutil.colors.red('Error: '), err.message);
+  this.emit('end');
 }
 
 /**
@@ -91,16 +91,16 @@ function errorHandler(err){
  * @returns {*}
  */
 function styles() {
-	return gulp.src(files.scssSrc)
-		.pipe(sourcemaps.init())
-		.pipe(sass({ style: 'expanded' })).on('error', errorHandler)
-		.pipe(autoprefixer({
-			browsers: ['last 2 versions', '> 1%'],
-			cascade: false
-		})).on('error', errorHandler)
-		.pipe(sourcemaps.write())
-		.pipe(isProduction ? minifyCSS() : gutil.noop() )
-		.pipe(gulp.dest(path.css.dest));
+  return gulp.src(files.scssSrc)
+    .pipe(sourcemaps.init())
+    .pipe(sass({ style: 'expanded' })).on('error', errorHandler)
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions', '> 1%'],
+      cascade: false
+    })).on('error', errorHandler)
+    .pipe(sourcemaps.write())
+    .pipe(isProduction ? minifyCSS() : gutil.noop() )
+    .pipe(gulp.dest(path.css.dest));
 }
 
 /**
@@ -115,12 +115,12 @@ function styles() {
  * @returns {*}
  */
 function jsUser() {
-	return gulp.src(files.jsUserSrcAssets)
-		.pipe(sourcemaps.init())
-		.pipe(concat(jsUserScript))
-		.pipe(sourcemaps.write())
-		.pipe(isProduction ? uglify() : gutil.noop() )
-		.pipe(gulp.dest(path.js.dest));
+  return gulp.src(files.jsUserSrcAssets)
+    .pipe(sourcemaps.init())
+    .pipe(concat(jsUserScript))
+    .pipe(sourcemaps.write())
+    .pipe(isProduction ? uglify() : gutil.noop() )
+    .pipe(gulp.dest(path.js.dest));
 }
 
 /**
@@ -133,10 +133,10 @@ function jsUser() {
  * @returns {*}
  */
 function jsVendor() {
-	return gulp.src(files.jsVendorSrc)
-		.pipe(concat('vendor.js'))
-		.pipe(isProduction ? uglify() : gutil.noop() )	// to unminify vendor in dev, remove "isProduction" ternary
-		.pipe(gulp.dest(path.jsVendor.dest));
+  return gulp.src(files.jsVendorSrc)
+    .pipe(concat('vendor.js'))
+    .pipe(isProduction ? uglify() : gutil.noop() )	// to unminify vendor in dev, remove "isProduction" ternary
+    .pipe(gulp.dest(path.jsVendor.dest));
 }
 
 /**
@@ -151,12 +151,12 @@ function jsVendor() {
  * @returns {*}
  */
 function jsAngular() {
-	return gulp.src([jsModuleFile].concat(files.jsUserSrcAngular))
-		.pipe(sourcemaps.init())
-		.pipe(concat(jsAngularScript))
-		.pipe(sourcemaps.write())
-		.pipe(isProduction ? uglify() : gutil.noop() )
-		.pipe(gulp.dest(path.jsAngular.dest));
+  return gulp.src([jsModuleFile].concat(files.jsUserSrcAngular))
+    .pipe(sourcemaps.init())
+    .pipe(concat(jsAngularScript))
+    .pipe(sourcemaps.write())
+    .pipe(isProduction ? uglify() : gutil.noop() )
+    .pipe(gulp.dest(path.jsAngular.dest));
 }
 
 /**
@@ -166,15 +166,15 @@ function jsAngular() {
  * localhost:8000
  */
 function serve() {
-	if (isProduction) {
-		return;
-	}
+  if (isProduction) {
+    return;
+  }
 
-	connect.server({
-		root: 'src',
-		port: 8000,
-		fallback: 'src/index.html'
-	});
+  connect.server({
+    root: 'src',
+    port: 8000,
+    fallback: 'src/index.html'
+  });
 }
 
 /**
@@ -184,22 +184,22 @@ function serve() {
  * Use "gulp --prod" to trigger production/build mode from commandline
  */
 function defaultTask() {
-	// if no production flag, start watching
-	if (isProduction) {
-		return;
-	}
+  // if no production flag, start watching
+  if (isProduction) {
+    return;
+  }
 
-	// compile SCSS
-	gulp.watch(files.scssSrc, ['styles']);
+  // compile SCSS
+  gulp.watch(files.scssSrc, ['styles']);
 
-	// compile JS vendor files
-	gulp.watch(files.jsVendorSrc, ['jsVendor']);
+  // compile JS vendor files
+  gulp.watch(files.jsVendorSrc, ['jsVendor']);
 
-	// compile JS asset files
-	gulp.watch(files.jsUserSrcAssets, ['jsUser']);
+  // compile JS asset files
+  gulp.watch(files.jsUserSrcAssets, ['jsUser']);
 
-	// compile JS Angular files
-	gulp.watch(files.jsUserSrcAngular, ['jsAngular']);
+  // compile JS Angular files
+  gulp.watch(files.jsUserSrcAngular, ['jsAngular']);
 }
 
 /**
