@@ -1,21 +1,18 @@
-// fetch API data
 (function() {
   'use strict';
 
   angular
     .module('app')
-    .factory('Dinos', Dinos);
+    .service('Dinos', Dinos);
 
   Dinos.$inject = ['$http', '$q'];
 
   function Dinos($http, $q) {
     var _baseUrl = 'http://localhost:3001/api/';
 
-    // callable members
-    return {
-      getAllDinos: getAllDinos,
-      getDino: getDino
-    };
+    // public members
+    this.getAllDinos = getAllDinos;
+    this.getDino = getDino;
 
     /**
      * GET all dinosaurs and return results
