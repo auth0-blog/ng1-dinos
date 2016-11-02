@@ -9,7 +9,7 @@
     // return directive
     return {
       restrict: 'EA',
-      template: '<img class="loading" src="/assets/images/ajax-loader.gif">'
+      template: '<img class="loading" src="/assets/images/raptor-loading.gif">'
     };
   }
   
