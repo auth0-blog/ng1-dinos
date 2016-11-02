@@ -11,7 +11,7 @@
       restrict: 'EA',
       replace: true,
       scope: {},
-      templateUrl: 'app/pages/home/dinoCard.tpl.html',
+      templateUrl: 'app/pages/home/dino-card/dinoCard.tpl.html',
       controller: dinoCardCtrl,
       controllerAs: 'dc',
       bindToController: {
