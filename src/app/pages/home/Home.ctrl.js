@@ -43,7 +43,7 @@
       home.loading = true;
 
       // get the data from JSON
-      return Dinos.getAllDinos().then(_getJsonSuccess, _getJsonError);
+      return Dinos.getAllDinos().then(_getJsonSuccess, _getJsonError).finally(_finally);
     }
 
     /**
@@ -55,9 +55,6 @@
     function _getJsonSuccess(data) {
       home.dinos = data;
 
-      // stop loading
-      home.loading = false;
-
       return home.dinos;
     }
 
@@ -68,8 +65,12 @@
      */
     function _getJsonError() {
       home.error = true;
+    }
 
-      // stop loading
+    /**
+     * Stop loading
+     */
+    function _finally() {
       home.loading = false;
     }
 

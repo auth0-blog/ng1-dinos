@@ -37,7 +37,7 @@
       detail.loading = true;
 
       // get the data from JSON
-      return Dinos.getDino(_id).then(_getJsonSuccess, _getJsonError);
+      return Dinos.getDino(_id).then(_getJsonSuccess, _getJsonError).finally(_finally);
     }
 
     /**
@@ -53,21 +53,21 @@
       // set page <title>
       Metadata.set(detail.title);
 
-      // stop loading
-      detail.loading = false;
-
       return detail.dino;
     }
 
     /**
      * Failure of promise data
      * Show error
-     * Stop loading
      */
     function _getJsonError() {
       detail.error = true;
+    }
 
-      // stop loading
+    /**
+     * Stop loading
+     */
+    function _finally() {
       detail.loading = false;
     }
   }
